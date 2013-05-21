@@ -11,7 +11,7 @@ class WeirdFigure
     /**
      * @param integer|float $x x coordinate
      * @param integer|float $y y coordinate
-     * @param integer|float $r positive radius
+     * @param integer|float $r greater than thero radius
      */
     public function __construct($x, $y, $r)
     {
@@ -34,12 +34,12 @@ class WeirdFigure
     /**
      * Sets new radius
      *
-     * @param integer|float $r positive radius
+     * @param integer|float $r greater than thero radius
      */
     public function setRadius($r)
     {
-        if ($r < 0) {
-            throw new \Exception('Radius cannot be negative');
+        if ($r <= 0) {
+            throw new \Exception('Radius must be greater than zero');
         }
 
         $this->radius = $r;
