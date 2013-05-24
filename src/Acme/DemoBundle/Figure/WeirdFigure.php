@@ -65,7 +65,7 @@ class WeirdFigure
 
         // square
         if ($x <= 0 && $y >= 0) {
-            return $x < $this->radius && $y < $this->radius;
+            return $x <= $this->radius && $y <= $this->radius;
         }
 
         // triangle
